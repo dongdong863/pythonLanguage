@@ -43,5 +43,41 @@ for num in nums:
 ave = sum /a
 print(ave)
 
+#累乘-初始值需要赋值为1
+a=1
+nums =[2,3,4,5]
+for num in nums:
+    a = a*num
+print(a)
 
 
+a = 1
+nums = [1,2,3,4,5]
+for num in nums:
+    a = a*num
+print(a)
+
+a=1
+nums = list(range(9,11))
+for num in nums:
+    a = a*num
+print(a)
+
+#列表统计次数
+count = 0
+snacks = ['chips','chocolate','cookie','chocolate','banana']
+for snack in snacks:
+    if snack == 'chocolate':
+        count=count+1
+print(count)
+
+count = 0
+nums = [1,2,3,2,3,4,2,35,2]
+for num in nums:
+    if num ==2:
+        count = count+1
+print(count)
+
+uid=1765565108
+b =uid%25
+print(b)
