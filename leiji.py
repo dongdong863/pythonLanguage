@@ -78,6 +78,74 @@ for num in nums:
         count = count+1
 print(count)
 
-uid=1765565108
-b =uid%25
+#列表中元素出现的概率
+count = 0
+list1 = [4,1,2,3,1,6,1,4]
+for a in list1:
+    if a == 1:
+        count=count +1
+l = len(list1)
+ratio = float(count/l)
+print(ratio)
+
+#利用range()函数，求数字8至50（包括50）的和
+sum = 0
+nums = list(range(8,51))
+for num in nums:
+    sum= sum+num
+
+print(sum)
+
+#以知列表c=[1,2,1,6,8,42,1]求元素1出现的次数及概率
+
+c=[1,2,1,6,8,42,1]
+count =0
+for i in c:
+    if i ==1:
+        count=count+1
+l = len(c)
+ratio= count/l
+print(count)
+print(ratio)
+
+#累加连续的数据
+sum =0
+for i in range(0,10):
+    sum =sum+i
+print(sum)
+
+sum =0
+for i in range(3,11):
+    sum =sum+i
+print(sum)
+
+#乘法--累积
+#计算1～10的乘积
+mul = 1
+for i in range(1,11):
+    mul =mul*i
+print(mul)
+
+
+#交换两个数
+a= 1
+b= 2
+t =a
+a = b
+b =t
+print(a)
 print(b)
+
+a = 2
+b = 1
+if (a>b):
+    t =a
+    a = b
+    b = t
+print(a)
+print(b)
+
+
+
+
+
