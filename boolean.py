@@ -11,3 +11,9 @@ print(a ==3)
 list = range(11,20)
 l = len(list)
 print(l  ==9)
+
+#利用布尔变量，判断list=[1,2,5,1,3,2]的长度是否等于5
+list=[1,2,5,1,3,2]
+l = len(list)
+print(l ==5)
+

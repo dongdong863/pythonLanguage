@@ -24,4 +24,69 @@ while a>0:
     print(a)
     a=a -2
 
-    
+
+#累乘数字11至15
+num = 11
+mul=1
+while num<=15:
+    mul = mul*num
+    num = num+1
+
+print(mul)
+
+
+#while求列表里的平均数
+list=[2,9,7]
+sum =0
+i = 0
+while i <len(list):
+    sum =sum+list[i]
+    i = i+1
+ave = sum/len(list)
+print(ave)
+
+#已知列表list=[6,1,2,9,2],求平均值
+list =[6,1,2,9,2]
+sum = 0
+i = 0
+while i <len(list):
+    sum = sum +list[i]
+    i = i+1
+ave= sum /len(list)
+print(ave)
+
+
+
+#用while求一个列表里1至9数字的平均数
+# num = list(range(1,10))
+# while i
+
+
+
+#显示0至50的偶数(不包括50)
+# while 结构确保a的范围是从0-50
+# if结构确保a%2==0，a是偶数
+i=0
+while i<50:
+    if i%2 ==0:
+        print(i)
+    i = i+1
+
+a =0
+while a <50:
+    print(a)
+    a=a+2
+
+#已知列表list=[45,34,52],求平均值
+list=[45,34,52]
+sum =0
+i =0
+while i<len(list):
+    sum =sum +list[i]
+    i =i+1
+print(sum)
+
+sum1=0
+for i1 in list:
+    sum1 = sum1+i1
+print(sum1)
