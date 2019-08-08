@@ -53,3 +53,31 @@ def mul(a,b,c):
     return a*b*c
 
 print(mul(1,2,3))
+
+#局部变量和全局变量
+#y是定义在函数里面的交局部变量
+#局部变量是在某个函数中声明的，只能在该函数中调用它
+#a是全局变量，全局变量是在整个py文件中声明，全局范围内可以访问
+
+def pllus(a,b):
+    y = a+b
+    return y
+a = plus(3,4)
+print(a)
+
+
+#定义一个函数plus()，并调用 plus()将数字7和8相加得到结果
+
+def plus(a,b):
+    x = a+b
+    return x
+y = plus(7,8)
+print(y)
+
+#定义一个又三个参数的函数mul()，然后调用mul()计算4，8，10的乘积
+
+def mul(a,b,c):
+    x = a*b*c
+    return x
+y = mul(2,3,4)
+print(y)
