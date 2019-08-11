@@ -116,3 +116,9 @@ b = {1:'two'}
 #b={2:'two'}
 a.update(b)
 print(a)
+
+#创建一个字典并且遍历字典里的键
+dict0={1:'one',2:'two',3:'three'}
+for i in dict0.values():
+    print(i)
+
