@@ -7,5 +7,9 @@ class Circle(object):
     def __init__(self,r):
         self.rad = r
     def area(self):
-        a = self.pi*self.r**2
+        a = self.pi*self.rad**2
         return a
+x = Circle(2)
+
+print(x.area())
+
