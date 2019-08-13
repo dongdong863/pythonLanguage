@@ -33,6 +33,25 @@ while num<=15:
     num = num+1
 
 print(mul)
+#a=3,利用while循环打印‘hello’4次
+a =3
+while a<7:
+    print('hello!')
+    a = a+1
+
+#求1至100所有数的和
+nums=list(range(1,101))
+sum = 0
+for num in nums:
+    sum = sum+num
+print(sum)
+
+num = 0
+sum =0
+while num<=100:
+    sum = sum +num
+    num =num +1
+print(sum)
 
 
 #while求列表里的平均数
