@@ -28,3 +28,10 @@ say()
 date=calendar.month(2019,8)
 print(date)
 
+
+#导入一个不在同一目录下的模块--用到sys模块里的path来显示
+#导入某个路径下的py文件,添加一个搜索路径！主要用两个\\
+import sys
+s=sys.path
+print(s)
+sys.path.append("F:\\python")
