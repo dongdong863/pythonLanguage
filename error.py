@@ -8,6 +8,39 @@
 #FileNotFoundError找不到文件产生的异常
 #文件夹下有read.txt，只输入read，就会报错，python并不知道read文件是说明
 # file_name = input("请输入文件名：")
-f = open(file_name)
+# f = open(file_name)
 
-#
+#多个异常
+
+try:
+    sum = 1+'1'
+    f = open('file.txt')
+    print(f.read())
+    f.close()
+except (TypeError,FileNotFoundError) as reason:
+    print('出错了\n出错的原因是：'+str(reason))
+
+#tyr里面的异常没有在except出现，也会报错
+#只要try里有一行代码命中except里的Error，命中的那条代码try里面后面的那些代码都不执行了
+
+
+#finally
+try:
+    f = open('file.txt','w')
+    f.write('123')
+    a=1+'2'
+    #f.close()如果放在这里，就不会执行到这句话，文件没有被保存
+except (OSError,TypeError) as reason:
+    print('出错了\n出错的原因是：'+str(reason))
+finally:
+    f.close()
+
+#try...except...else
+#try语句执行时没有异常，python执行else后的语句
+
+try:
+    int('123')
+except VauleError as reason:
+    print('出错了\n出错的内容是：'+str(reason))
+else:
+    print('无异常')
