@@ -11,6 +11,74 @@
 # f = open(file_name)
 
 #多个异常
+#处理异常
+# try：
+#     #检测范围
+# except Exception[as reson]:
+#     #出现异常后的处理
+
+# f = open('file.txt')
+# print(f.read())
+# f.close()
+#处理异常
+# try：
+#     #检测范围
+# except Exception[as reson]:
+#     #出现异常后的处理
+
+# f = open('file.txt')
+# print(f.read())
+# f.close()
+#找不到文件异常
+try:
+    f= open('file.txt')
+    print(f.read())
+    f.close()
+except FileNotFoundError:
+    print('文件出错了')
+
+#0 不能做除数异常
+try:
+    num1=input('请输入被除数：')
+    num2=input('请输入除数：')
+    result = int(num1)/int(num2)
+    print(result)
+except ZeroDivisionError:
+    print('0不能做除数')
+
+#查看具体出错原因
+try:
+    f= open('file.txt')
+    print(f.read())
+    f.close()
+except FileNotFoundError as reason:
+    print('出错的原因：'+str(reason))
+
+
+#找不到文件异常
+try:
+    f= open('file.txt')
+    print(f.read())
+    f.close()
+except FileNotFoundError:
+    print('文件出错了')
+
+#0 不能做除数异常
+try:
+    num1=input('请输入被除数：')
+    num2=input('请输入除数：')
+    result = int(num1)/int(num2)
+    print(result)
+except ZeroDivisionError:
+    print('0不能做除数')
+
+#查看具体出错原因
+try:
+    f= open('file.txt')
+    print(f.read())
+    f.close()
+except FileNotFoundError as reason:
+    print('出错的原因：'+str(reason))
 
 try:
     sum = 1+'1'
