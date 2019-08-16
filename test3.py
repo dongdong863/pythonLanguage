@@ -37,6 +37,66 @@ for red in range(0,4):
                 n+= 1
 print(n)
 
+#设计一个验证用户密码的程序，用户只有3次机会
+count = 3
+pwd = 123456
+while count:
+    count -= 1
+    num = int(input("请输入密码"))
+    if num== pwd:
+        print("密码正确")
+        break
+    else:
+        if count !=0:
+            print("密码错误，你还有",count,'次机会')
+        else:
+            print('你已经输入3次错误密码，无法再次输入')
+
+
+#pow()乘法问题
+a =pow(2,3)
+print(a)
+#乘法做循环
+def power(x,y):
+    result = 1
+    for i in range(y):
+        result= result * x
+    return result
+print(power(2,4))
+
+#统计一个子字符窜在另一个字符窜中出现的次数
+#比如一个字符窜"Her name is Lily and she is cute",我们想知道is在你这个字符窜中出现了几次
+
+a = input("请输入字符窜：")
+b = input("请输入子字符窜（两个字符）")
+times = a.count(b)
+print("子字符窜一共在字符窜中出现了",times,"次")
+
+
+#列表专项训练
+#复制列表
+l1 = ["hello",'seven',["yr",["h","mike",'all']],123,456]
+l2 = l1[:]
+print(l2)
+
+#切片，list取值的一种方式，取值是---顾头不顾尾
+
+l=[1,2,3,4,5,6,7]
+l3=l[0:2]
+
+#list[起始：结束：步长]--默认部长是1
+#2是每隔一个数取一个值
+l4 = l[0::2]
+print(l4)
+#倒着去
+l5 = l[::-1]
+print(l5)
+
+#l1 = ["hello",'seven',["yr",["h","mike",'all']],123,456]输出
+l6 = ["hello",'seven',["yr",["h","mike",'all']],123,456]
+#a列表里的b列表里的c列表的元素有h
+n =l6[2][1][0]
+print(n)
 
 
 
