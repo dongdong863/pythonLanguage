@@ -131,6 +131,13 @@ while True:
         break
 print('感谢使用通讯录')
 
-
+#写一个程序，接受用户输入的内容
+filename = input('请输入文件的名字：')
+context = input('请输入文件的内容')
+f = open(filename,'w')
+f.write(context)
+f = open(filename,'r')
+print(f.read())
+f.close()
 
 
