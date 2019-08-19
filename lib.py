@@ -191,3 +191,48 @@ print(n.group())
 #返回结果是字符窜中所有数字字符构成的列表
 m = re.findall('\d','我有1个苹果，2个梨和3个桃子')
 print(m)
+
+m = re.search('[a-zA-Z0-9]{2,4}','x.5h3Wng')
+print(m.group())
+
+#*标识任意个字符（包括0个）
+m =re.search('ca*t','ct')
+n = re.search('ca*t','caat')
+b = re.search('ca*t','caaaaat')
+
+print(m.group())
+print(n.group())
+print(b.group())
+
+#具有其他的含义的字符叫元字符
+#^,$,*,+,?,{},[],|,(),\
+#元字符在方括号仲不表示特殊含义
+#$是一个元字符，在[]中只匹配$字符本身
+
+m = re.search('[a-z$]','abced123')
+print(m.group())
+
+#python的字符窜本身用反斜杠\转义
+#比如字母n前面加上\，那么\n就表示换行
+x = 'abc\nabc'
+y = 'abc\\n'
+print(x)
+print(y)
+#一般使用python的原始字符窜r
+a = r'abc\n'
+print(a)
+
+#正则表达式里通常包含反斜杠，想\s都有特殊含义
+#匹配的字符窜是'\s',正则表达式就要写成r'\\s'
+#pythonde r前缀，就不用考虑转义的问题
+m = re.search(r'\\s','\s')
+print(m.group())
+
+
+
+
+
+
+
+
+
