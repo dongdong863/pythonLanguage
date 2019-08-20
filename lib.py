@@ -241,7 +241,40 @@ p = re.compile(r'\d+')
 m = p.match('abc123bbbb',3,5)#第4位开始第6位结束
 print(m.group())
 
+#提取子窜---用group(x)提取分组
+#先定义两个组
+p = re.compile(r'(^\d{3})-(\d{3,8}$)')
+m = p.match('021-123456')
+print(m.group())
+#返回第一个分组匹配成功的子窜
+print(m.group(1))
+#返回第二个分组匹配成功的子窜
+print(m.group(2))
+#返回所有分组内容，相当于(m.group(1),m.group(2),......)
+print(m.groups())
+#第三个分组不存在
+# print(m.group(3))
 
+p = re.compile(r'([a-zA-Z]+) ([a-zA-Z]+)')
+m = p.match('Hello Cheng Xu Yuan')
+print(m.group())
 
+#切分字符窜
+#re.split()是按照能够匹配的子窜将字符窜分割后返回列表
+a='a b   c'.split()
+print(a)
 
+p = re.split(r'\s+','a b  c')
+print(p)
+#包含逗号
+# p = re.split(r'[\s,]+','a,b,  c')
+# print(p)
 
+#正则表达式是贪婪匹配,\d+把后面的1全部匹配了，1*值只有匹配空字符窜了
+p = re.compile(r'(\d+)(1*)')
+m = p.match('22111111')
+print(m.groups())
+
+p = re.compile(r'(\d+?)(1*)$')
+m = p.match('2233111111')
+print(m.groups())
