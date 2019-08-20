@@ -158,7 +158,7 @@ print(m.group())
 m = re.search('\d\s','001 ae2')
 print(m.group())
 
-#+表示少一个字符、？表示0个或者1个字符
+#+表示至少一个字符、？表示0个或者1个字符
 
 #[]比如[0-9a-zA-Z]可以匹配一个数字或者字母
 m =re.search('[0-9a-zA-Z]','b_3_afi')
@@ -228,9 +228,18 @@ print(a)
 m = re.search(r'\\s','\s')
 print(m.group())
 
+#匹配至少一个数字
+#compile()用于编译正则表达式
+#\d+至少一个是数字
+#match从第一个开始匹配，不对的返回none
+p = re.compile(r'\d+')
+m = p.match('1abcd123456bb')
+print(m.group())
 
-
-
+#用match()指定匹配开始和结束的位置
+p = re.compile(r'\d+')
+m = p.match('abc123bbbb',3,5)#第4位开始第6位结束
+print(m.group())
 
 
 
